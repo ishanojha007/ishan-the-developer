@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "3a7e711c-5d30-4bff-a5ce-0fb95579c0c5",
+		"name": "laravel-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12200923"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "johan@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Johan@123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}login",
+					"host": [
+						"{{BASE_URL}}login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Profile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "johan@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Johan@123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}profile",
+					"host": [
+						"{{BASE_URL}}profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Amount In Wallet",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "amount",
+							"value": "5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}add_amount_in_wallet",
+					"host": [
+						"{{BASE_URL}}add_amount_in_wallet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buy Cookie",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "quantity",
+							"value": "10",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}buy_cookie",
+					"host": [
+						"{{BASE_URL}}buy_cookie"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
